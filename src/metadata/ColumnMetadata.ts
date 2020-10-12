@@ -615,7 +615,7 @@ export class ColumnMetadata {
                 if (relatedEntity && relatedEntity instanceof Object && !(relatedEntity instanceof FindOperator) && !(relatedEntity instanceof Function)) {
                     value = this.referencedColumn.getEntityValue(relatedEntity);
 
-                } else if (entity[this.propertyName] && entity[this.propertyName] instanceof Object && !(entity[this.propertyName] instanceof FindOperator) && !(entity[this.propertyName] instanceof Function)) {
+                } else if (entity[this.propertyName] && entity[this.propertyName] instanceof Object && !(entity[this.propertyName] instanceof FindOperator) && !(entity[this.propertyName] instanceof Function) && !(entity[this.propertyName] instanceof Buffer)) {
                     value = this.referencedColumn.getEntityValue(entity[this.propertyName]);
 
                 } else {
